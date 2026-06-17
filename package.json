@@ -1,0 +1,24 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "This repository is part of the **Meta course on Coursera** and is designed to demonstrate the use of **HTML** and **Bootstrap** for building responsive web pages.",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CFMVCarlos/Bootstrap-Meta-Coursera.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/CFMVCarlos/Bootstrap-Meta-Coursera/issues"
+  },
+  "homepage": "https://github.com/CFMVCarlos/Bootstrap-Meta-Coursera#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.61.0"
+  }
+}
