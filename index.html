@@ -19,10 +19,13 @@
           <div class="row">
             <div class="col-12 col-lg-6">
               <div class="card">
+                <!-- ⚡ Bolt: Use fetchpriority="high" and decoding="async" for faster LCP -->
                 <img
                   src="calamari.jpg"
                   alt="Fried Calamari"
                   class="card-img-top"
+                  fetchpriority="high"
+                  decoding="async"
                 />
                 <div class="card-body">
                   <h2 class="card-title">
@@ -34,10 +37,13 @@
             </div>
             <div class="col-12 col-lg-6">
               <div class="card">
+                <!-- ⚡ Bolt: Use loading="lazy" and decoding="async" to defer offscreen images and reduce main thread block -->
                 <img
                   src="falafel.jpg"
                   alt="Image of Falafel"
                   class="card-img-top"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div class="card-body">
                   <h2 class="card-title">Falafel</h2>
@@ -47,10 +53,13 @@
             </div>
             <div class="col-12 col-lg-6">
               <div class="card">
+                <!-- ⚡ Bolt: Use loading="lazy" and decoding="async" to defer offscreen images and reduce main thread block -->
                 <img
                   src="salad.jpg"
                   alt="Image of a salad"
                   class="card-img-top"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div class="card-body">
                   <h2 class="card-title">Pasta Salad</h2>
