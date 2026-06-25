@@ -16,13 +16,10 @@ test.describe('Menu Page E2E tests', () => {
     await expect(menuHeading).toBeVisible();
 
     // Assert the 3 menu cards titles
-    const friedCalamari = page.locator('h2.card-title', { hasText: 'Fried Calamari' });
-    const falafel = page.locator('h2.card-title', { hasText: 'Falafel' });
-    const pastaSalad = page.locator('h2.card-title', { hasText: 'Pasta Salad' });
-
-    await expect(friedCalamari).toBeVisible();
-    await expect(falafel).toBeVisible();
-    await expect(pastaSalad).toBeVisible();
+    const menuItems = ['Fried Calamari', 'Falafel', 'Pasta Salad'];
+    for (const item of menuItems) {
+      await expect(page.locator('h2.card-title', { hasText: item })).toBeVisible();
+    }
 
     // Assert the image sources
     const calamariImg = page.locator('img[src="calamari.jpg"]');
