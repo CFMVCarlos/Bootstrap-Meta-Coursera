@@ -24,6 +24,15 @@ test.describe('Menu Page E2E tests', () => {
     await expect(falafel).toBeVisible();
     await expect(pastaSalad).toBeVisible();
 
+    // Assert the image sources
+    const calamariImg = page.locator('img[src="calamari.jpg"]');
+    const falafelImg = page.locator('img[src="falafel.jpg"]');
+    const saladImg = page.locator('img[src="salad.jpg"]');
+
+    await expect(calamariImg).toBeVisible();
+    await expect(falafelImg).toBeVisible();
+    await expect(saladImg).toBeVisible();
+
     // Assert "Prices" heading and table
     const pricesHeading = page.locator('h2', { hasText: 'Prices' });
     await expect(pricesHeading).toBeVisible();
@@ -31,7 +40,7 @@ test.describe('Menu Page E2E tests', () => {
     await expect(table).toBeVisible();
 
     // Assert the info alert
-    const infoAlert = page.locator('.alert.alert-info', { hasText: 'Try our new Fried Calamary!' });
+    const infoAlert = page.locator('.alert.alert-info', { hasText: 'Try our new Fried Calamari!' });
     await expect(infoAlert).toBeVisible();
 
     // Assert the primary alert
