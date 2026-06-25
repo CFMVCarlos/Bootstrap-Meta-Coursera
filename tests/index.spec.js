@@ -31,7 +31,7 @@ test.describe('Menu Page E2E tests', () => {
     await expect(table).toBeVisible();
 
     // Assert the info alert
-    const infoAlert = page.locator('.alert.alert-info', { hasText: 'Try our new Fried Calamary!' });
+    const infoAlert = page.locator('.alert.alert-info', { hasText: 'Try our new Fried Calamari!' });
     await expect(infoAlert).toBeVisible();
 
     // Assert the primary alert
