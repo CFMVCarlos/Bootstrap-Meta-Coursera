@@ -39,6 +39,19 @@ test.describe('Menu Page E2E tests', () => {
     const table = page.locator('table.table');
     await expect(table).toBeVisible();
 
+    // Assert menu prices in the table
+    const row1 = table.locator('tr').nth(0);
+    await expect(row1.locator('td').nth(0)).toHaveText('Fried Calamari');
+    await expect(row1.locator('td').nth(1)).toHaveText('$12.00');
+
+    const row2 = table.locator('tr').nth(1);
+    await expect(row2.locator('td').nth(0)).toHaveText('Falafel');
+    await expect(row2.locator('td').nth(1)).toHaveText('$12.00');
+
+    const row3 = table.locator('tr').nth(2);
+    await expect(row3.locator('td').nth(0)).toHaveText('Pasta Salad');
+    await expect(row3.locator('td').nth(1)).toHaveText('$10.00');
+
     // Assert the info alert
     const infoAlert = page.locator('.alert.alert-info', { hasText: 'Try our new Fried Calamari!' });
     await expect(infoAlert).toBeVisible();
