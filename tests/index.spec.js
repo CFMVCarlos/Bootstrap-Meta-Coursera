@@ -22,9 +22,9 @@ test.describe('Menu Page E2E tests', () => {
     }
 
     // Assert the image sources
-    const calamariImg = page.locator('img[src="calamari.jpg"]');
-    const falafelImg = page.locator('img[src="falafel.jpg"]');
-    const saladImg = page.locator('img[src="salad.jpg"]');
+    const calamariImg = page.locator('img[src="img/calamari.jpg"]');
+    const falafelImg = page.locator('img[src="img/falafel.jpg"]');
+    const saladImg = page.locator('img[src="img/salad.jpg"]');
 
     await expect(calamariImg).toBeVisible();
     await expect(falafelImg).toBeVisible();
@@ -50,7 +50,7 @@ test.describe('Menu Page E2E tests', () => {
     await expect(row3.locator('td').nth(1)).toHaveText('$10.00');
 
     // Assert the bruschetta image
-    const bruschettaImg = page.locator('img[src="bruschetta.jpg"]');
+    const bruschettaImg = page.locator('img[src="img/bruschetta.jpg"]');
     await expect(bruschettaImg).toBeVisible();
 
     // Assert the info alert

@@ -77,12 +77,13 @@ npm test
 
 ```text
 Bootstrap-Meta-Coursera/
+├── img/                  # Optimized dish images
+│   ├── bruschetta.jpg    # Dish asset (Bruschetta Rustica)
+│   ├── calamari.jpg      # Dish asset (Fried Calamari)
+│   ├── falafel.jpg       # Dish asset (Falafel)
+│   └── salad.jpg         # Dish asset (Pasta Salad)
 ├── tests/
 │   └── index.spec.js     # Playwright E2E tests validating layout & content
-├── bruschetta.jpg        # Dish asset (Bruschetta Rustica)
-├── calamari.jpg          # Dish asset (Fried Calamari)
-├── falafel.jpg           # Dish asset (Falafel)
-├── salad.jpg             # Dish asset (Pasta Salad)
 ├── screenshot.png        # Full-page layout preview
 ├── index.html            # Main responsive web page
 ├── package.json          # Node dependencies & test scripts
