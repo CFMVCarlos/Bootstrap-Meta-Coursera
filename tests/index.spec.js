@@ -49,12 +49,12 @@ test.describe('Menu Page E2E tests', () => {
     await expect(row3.locator('td').nth(0)).toHaveText('Pasta Salad');
     await expect(row3.locator('td').nth(1)).toHaveText('$10.00');
 
+    // Assert the bruschetta image
+    const bruschettaImg = page.locator('img[src="bruschetta.jpg"]');
+    await expect(bruschettaImg).toBeVisible();
+
     // Assert the info alert
     const infoAlert = page.locator('.alert.alert-info', { hasText: 'Try our new Fried Calamari!' });
     await expect(infoAlert).toBeVisible();
-
-    // Assert the primary alert
-    const primaryAlert = page.locator('.alert.alert-primary', { hasText: 'I appear on the right when screen is large' });
-    await expect(primaryAlert).toBeVisible();
   });
 });

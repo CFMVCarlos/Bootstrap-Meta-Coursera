@@ -190,11 +190,16 @@
             <!-- Additional Menu Item: Greek Bruschetta -->
             <div class="col-12 col-md-6 col-lg-6">
               <div class="card h-100 shadow-sm border-0 transition-all bg-white">
-                <div class="bg-warning-subtle text-warning-emphasis d-flex align-items-center justify-content-center rounded-top" style="height: 180px;">
-                  <div class="text-center p-3">
-                    <i class="bi bi-egg-fried fs-1 text-warning"></i>
-                    <div class="fw-semibold small mt-1">Chef's Tapas</div>
-                  </div>
+                <div class="position-relative">
+                  <img
+                    src="bruschetta.jpg"
+                    alt="Bruschetta Rustica"
+                    class="card-img-top object-fit-cover rounded-top"
+                    style="height: 180px;"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="position-absolute top-0 end-0 m-2 badge bg-warning text-dark shadow-sm">Chef's Tapas</span>
                 </div>
                 <div class="card-body d-flex flex-column">
                   <h3 class="h5 fw-bold d-flex justify-content-between align-items-center mb-1">
@@ -356,14 +361,7 @@
 
         <!-- Sidebar Promotion Column (Visible on large screens) -->
         <div class="col-lg" id="specials">
-          <div class="alert alert-primary shadow-sm d-flex align-items-center gap-2 mb-3" role="alert">
-            <i class="bi bi-megaphone-fill fs-5"></i>
-            <div>
-              I appear on the right when screen is large
-            </div>
-          </div>
-
-          <!-- Extra Promo Widget -->
+          <!-- Weekend Special Promo Widget -->
           <div class="card border-0 bg-dark text-white p-3 shadow-sm rounded-3">
             <h5 class="card-title fw-bold text-warning d-flex align-items-center gap-2 mb-2">
               <i class="bi bi-gift-fill"></i> Weekend Special
