@@ -17,8 +17,14 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍋</text></svg>" />
-    <meta name="description" content="Little Lemon Mediterranean Restaurant - Fresh, traditional dishes in Chicago, IL." />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍋</text></svg>"
+    />
+    <meta
+      name="description"
+      content="Little Lemon Mediterranean Restaurant - Fresh, traditional dishes in Chicago, IL."
+    />
     <!-- Content Security Policy -->
     <meta
       http-equiv="Content-Security-Policy"
@@ -27,7 +33,7 @@
   </head>
   <body class="bg-light">
     <!-- Top Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm px-3">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm px-3 d-print-none">
       <div class="container-fluid px-lg-5">
         <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#">
           <span class="fs-4">🍋</span> Little Lemon
@@ -55,8 +61,24 @@
               <a class="nav-link" href="#specials">Daily Specials</a>
             </li>
           </ul>
-          <div class="d-flex align-items-center gap-2 text-white-50 small">
-            <i class="bi bi-geo-alt-fill text-warning"></i> Mediterranean Bistro &bull; Open Daily
+          <div class="d-flex align-items-center gap-2">
+            <button
+              class="btn btn-outline-light btn-sm fw-semibold"
+              type="button"
+              onclick="window.print()"
+              title="Print menu"
+            >
+              <i class="bi bi-printer me-1"></i> Print
+            </button>
+            <button
+              class="btn btn-warning btn-sm fw-semibold"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#reservationDrawer"
+              aria-controls="reservationDrawer"
+            >
+              <i class="bi bi-calendar-check me-1"></i> Reserve Table
+            </button>
           </div>
         </div>
       </div>
@@ -76,7 +98,7 @@
               Hand-crafted Mediterranean dishes prepared fresh daily with the finest farm-to-table ingredients, herbs, and spices.
             </p>
           </div>
-          <div class="col-md-4 text-md-end">
+          <div class="col-md-4 text-md-end d-print-none">
             <div class="p-3 bg-light rounded-3 border d-inline-block text-start">
               <div class="fw-bold text-dark small mb-1"><i class="bi bi-clock me-1 text-primary"></i> Kitchen Hours</div>
               <div class="text-muted small">Lunch: 11:30 AM &ndash; 3:00 PM</div>
@@ -96,7 +118,7 @@
               <i class="bi bi-card-checklist me-1 text-primary"></i> Featured Selections
             </h2>
             <span class="badge bg-primary-subtle text-primary border border-primary-subtle">
-              3 Signature Dishes
+              4 Signature Dishes
             </span>
           </div>
 
@@ -126,6 +148,14 @@
                   </p>
                   <div class="d-flex justify-content-between align-items-center pt-2 border-top mt-auto">
                     <span class="badge bg-light text-secondary border">Seafood</span>
+                    <button
+                      class="btn btn-outline-primary btn-sm rounded-pill px-2 py-0 small d-print-none"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#calamariModal"
+                    >
+                      <i class="bi bi-info-circle me-1"></i>Details
+                    </button>
                     <span class="fw-bold text-success">$12.00</span>
                   </div>
                 </div>
@@ -155,6 +185,14 @@
                   </p>
                   <div class="d-flex justify-content-between align-items-center pt-2 border-top mt-auto">
                     <span class="badge bg-light text-secondary border">House Specialty</span>
+                    <button
+                      class="btn btn-outline-primary btn-sm rounded-pill px-2 py-0 small d-print-none"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#falafelModal"
+                    >
+                      <i class="bi bi-info-circle me-1"></i>Details
+                    </button>
                     <span class="fw-bold text-success">$12.00</span>
                   </div>
                 </div>
@@ -184,13 +222,21 @@
                   </p>
                   <div class="d-flex justify-content-between align-items-center pt-2 border-top mt-auto">
                     <span class="badge bg-light text-secondary border">Salad</span>
+                    <button
+                      class="btn btn-outline-primary btn-sm rounded-pill px-2 py-0 small d-print-none"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#saladModal"
+                    >
+                      <i class="bi bi-info-circle me-1"></i>Details
+                    </button>
                     <span class="fw-bold text-success">$10.00</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Additional Menu Item: Greek Bruschetta -->
+            <!-- Bruschetta Rustica -->
             <div class="col-12 col-md-6 col-lg-6">
               <div class="card h-100 shadow-sm border-0 transition-all bg-white">
                 <div class="position-relative">
@@ -213,6 +259,14 @@
                   </p>
                   <div class="d-flex justify-content-between align-items-center pt-2 border-top mt-auto">
                     <span class="badge bg-light text-secondary border">Appetizer</span>
+                    <button
+                      class="btn btn-outline-primary btn-sm rounded-pill px-2 py-0 small d-print-none"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#bruschettaModal"
+                    >
+                      <i class="bi bi-info-circle me-1"></i>Details
+                    </button>
                     <span class="fw-bold text-success">$8.50</span>
                   </div>
                 </div>
@@ -372,16 +426,176 @@
             <p class="card-text small text-white-50 mb-3">
               Order any 2 main courses this weekend and get a complimentary dessert or homemade mint lemonade.
             </p>
-            <button class="btn btn-warning btn-sm fw-semibold w-100">
-              Claim Offer
+            <button
+              class="btn btn-warning btn-sm fw-semibold w-100"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#reservationDrawer"
+              aria-controls="reservationDrawer"
+            >
+              Book Weekend Table
             </button>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Nutritional & Dish Details Modals -->
+    <!-- Fried Calamari Modal -->
+    <div class="modal fade" id="calamariModal" tabindex="-1" aria-labelledby="calamariModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title fw-bold" id="calamariModalLabel"><i class="bi bi-egg-fried me-2"></i>Fried Calamari</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-light border small mb-3">
+              <span class="badge bg-primary me-1">Chef's Choice</span>
+              <span class="badge bg-secondary">Seafood</span>
+            </div>
+            <p class="text-muted">Crispy golden squid rings tossed with fresh parsley and Mediterranean sea salt, accompanied by seasoned buttermilk aioli and grilled lemon wedges.</p>
+            <ul class="list-group list-group-flush small">
+              <li class="list-group-item d-flex justify-content-between px-0"><span>Calories:</span> <strong>380 kcal</strong></li>
+              <li class="list-group-item d-flex justify-content-between px-0"><span>Allergens:</span> <strong>Molluscs, Dairy, Gluten</strong></li>
+              <li class="list-group-item d-flex justify-content-between px-0"><span>Preparation:</span> <strong>Flash fried in 100% sunflower oil</strong></li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Falafel Modal -->
+    <div class="modal fade" id="falafelModal" tabindex="-1" aria-labelledby="falafelModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+          <div class="modal-header bg-success text-white">
+            <h5 class="modal-title fw-bold" id="falafelModalLabel"><i class="bi bi-patch-check me-2"></i>Falafel</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-light border small mb-3">
+              <span class="badge bg-success me-1">Popular</span>
+              <span class="badge bg-secondary">House Specialty</span>
+            </div>
+            <p class="text-muted">Hand-pressed chickpea and herb croquettes blended with garlic, cumin, and coriander, served with house sesame tahini dip.</p>
+            <ul class="list-group list-group-flush small">
+              <li class="list-group-item d-flex justify-content-between px-0"><span>Calories:</span> <strong>320 kcal</strong></li>
+              <li class="list-group-item d-flex justify-content-between px-0"><span>Allergens:</span> <strong>Sesame</strong></li>
+              <li class="list-group-item d-flex justify-content-between px-0"><span>Dietary:</span> <strong>100% Vegan &amp; Gluten-Free</strong></li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pasta Salad Modal -->
+    <div class="modal fade" id="saladModal" tabindex="-1" aria-labelledby="saladModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+          <div class="modal-header bg-info text-dark">
+            <h5 class="modal-title fw-bold" id="saladModalLabel"><i class="bi bi-flower1 me-2"></i>Pasta Salad</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-light border small mb-3">
+              <span class="badge bg-info text-dark me-1">Fresh</span>
+              <span class="badge bg-secondary">Vegetarian</span>
+            </div>
+            <p class="text-muted">Chilled Italian rotini pasta tossed with romaine lettuce, Kalamata olives, cherry tomatoes, cucumbers, and fresh buffalo mozzarella in red wine vinaigrette.</p>
+            <ul class="list-group list-group-flush small">
+              <li class="list-group-item d-flex justify-content-between px-0"><span>Calories:</span> <strong>290 kcal</strong></li>
+              <li class="list-group-item d-flex justify-content-between px-0"><span>Allergens:</span> <strong>Dairy, Gluten</strong></li>
+              <li class="list-group-item d-flex justify-content-between px-0"><span>Dietary:</span> <strong>Vegetarian</strong></li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bruschetta Modal -->
+    <div class="modal fade" id="bruschettaModal" tabindex="-1" aria-labelledby="bruschettaModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+          <div class="modal-header bg-warning text-dark">
+            <h5 class="modal-title fw-bold" id="bruschettaModalLabel"><i class="bi bi-fire me-2"></i>Bruschetta Rustica</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-light border small mb-3">
+              <span class="badge bg-warning text-dark me-1">Chef's Tapas</span>
+              <span class="badge bg-secondary">Appetizer</span>
+            </div>
+            <p class="text-muted">Artisanal wood-fired sourdough rubbed with fresh garlic, topped with vine-ripened diced heirloom tomatoes, sweet basil, cold-pressed olive oil, and balsamic reduction.</p>
+            <ul class="list-group list-group-flush small">
+              <li class="list-group-item d-flex justify-content-between px-0"><span>Calories:</span> <strong>210 kcal</strong></li>
+              <li class="list-group-item d-flex justify-content-between px-0"><span>Allergens:</span> <strong>Gluten</strong></li>
+              <li class="list-group-item d-flex justify-content-between px-0"><span>Dietary:</span> <strong>100% Vegan</strong></li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Offcanvas Reservation Drawer -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="reservationDrawer" aria-labelledby="reservationDrawerLabel">
+      <div class="offcanvas-header bg-dark text-white">
+        <h5 class="offcanvas-title fw-bold d-flex align-items-center gap-2" id="reservationDrawerLabel">
+          <span>🍋</span> Reserve a Table
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <p class="text-muted small">Book your dining experience at Little Lemon Chicago. Walk-ins are also welcome!</p>
+        <form onsubmit="event.preventDefault(); alert('Reservation submitted! We will contact you to confirm.');">
+          <div class="mb-3">
+            <label for="guestName" class="form-label small fw-semibold">Full Name</label>
+            <input type="text" class="form-control" id="guestName" placeholder="Your name" required />
+          </div>
+          <div class="mb-3">
+            <label for="guestEmail" class="form-label small fw-semibold">Email</label>
+            <input type="email" class="form-control" id="guestEmail" placeholder="name@example.com" required />
+          </div>
+          <div class="row g-2 mb-3">
+            <div class="col-6">
+              <label for="resDate" class="form-label small fw-semibold">Date</label>
+              <input type="date" class="form-control" id="resDate" required />
+            </div>
+            <div class="col-6">
+              <label for="resGuests" class="form-label small fw-semibold">Guests</label>
+              <select class="form-select" id="resGuests">
+                <option value="1">1 Person</option>
+                <option value="2" selected>2 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="6">6+ Large Party</option>
+              </select>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="specialNotes" class="form-label small fw-semibold">Special Requests</label>
+            <textarea class="form-control" id="specialNotes" rows="3" placeholder="Seating preferences, dietary restrictions..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-warning w-100 fw-bold">
+            <i class="bi bi-check-circle-fill me-1"></i> Confirm Reservation
+          </button>
+        </form>
+      </div>
+    </div>
+
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4 mt-auto border-top px-3">
+    <footer class="bg-dark text-white py-4 mt-auto border-top px-3 d-print-none">
       <div class="container-fluid px-lg-5 text-center small text-muted">
         <div class="row gy-3 align-items-center">
           <div class="col-md-4 text-md-start">

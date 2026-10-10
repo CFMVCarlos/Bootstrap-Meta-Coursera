@@ -28,10 +28,13 @@ This project is part of the **Meta Front-End Developer Professional Certificate*
 
 ## ✨ Features
 
-- **🧭 Responsive Navigation Bar:** Sticky navbar with brand logo, quick navigation links, and online order CTA.
+- **🧭 Responsive Navigation Bar:** Sticky navbar with brand logo, quick navigation links, print action, and reservation trigger.
 - **📱 Responsive Grid Layout:** Adapts seamlessly across mobile, tablet, and desktop viewports using Bootstrap's 12-column grid system (`col-12`, `col-md-6`, `col-lg-5`, `col-lg`).
 - **🎴 Dish Showcase Cards:** Clean Bootstrap cards highlighting popular dishes (`Fried Calamari`, `Falafel`, `Pasta Salad`, `Bruschetta Rustica`) with descriptions, badges, and prices.
+- **🔍 Dish Details & Nutritional Modals:** Interactive Bootstrap modals providing allergen and caloric breakdowns for each dish via pure HTML data attributes (`data-bs-toggle="modal"`).
+- **📅 Table Reservation Offcanvas Drawer:** Pure Bootstrap slide-out drawer (`data-bs-toggle="offcanvas"`) enabling users to book a table directly.
 - **📂 Interactive Category Accordion:** Pure Bootstrap collapsible accordion featuring Entrées & Mains and Desserts & Beverages without custom scripts.
+- **🖨️ Clean Print Styling:** Bootstrap print utilities (`d-print-none`) ensuring clean menu printing with navigation and footers automatically hidden.
 - **⚡ Image Performance Optimizations:** Native lazy-loading (`loading="lazy"`), asynchronous image decoding (`decoding="async"`), and LCP prioritization (`fetchpriority="high"`).
 - **📊 Responsive Pricing Table:** Formatted item-and-price breakdown with hover states and dietary disclaimer.
 - **🛡️ Content Security Policy (CSP):** Configured `<meta>` security policy restricting external asset sources to trusted CDNs.
